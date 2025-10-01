@@ -1,7 +1,21 @@
 name = "tenshipro"
 main = ".svelte-kit/cloudflare/_worker.js"
 compatibility_date = "2025-09-30"
+workers_dev = false
 
 [assets]
 binding = "ASSETS"
 directory = ".svelte-kit/cloudflare"
+
+[observability]
+enabled = false
+
+[build]
+command = "yarn run build"
+
+[vars]
+NODE_VERSION = "22.20.0"
+
+[[routes]]
+pattern = "tenshipro.com"
+custom_domain = true
